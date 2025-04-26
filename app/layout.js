@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import AddToCart from "../components/addToCart";
+import { CartProvider } from '../context/CartContext'; 
 
 
 const inter = Inter({
@@ -36,7 +37,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${roboto.className} antialiased pl-5 pr-5 pt-5 relative`}
       >
-
+        <CartProvider>
         <Header className='w-[100%] z-100'></Header>
         <div className="absolute right-0">
         <AddToCart></AddToCart>
@@ -44,7 +45,9 @@ export default function RootLayout({ children }) {
         
         {children}
         <Footer></Footer>
+        </CartProvider>
 
+        
       </body>
     </html>
   );
