@@ -1,15 +1,25 @@
-import React from 'react'
-import Product from './product'
+import React from 'react';
+import Product from './product';
+import productPosts from '../data/products.json';
 
-function ProductList() {
+function ProductList({ activeCategory = 'All', isPopular = 'false' }) {
+  // 1. Filter po kategoriji ako nije "All"
+  const filteredByCategory = activeCategory === 'All'
+    ? productPosts
+    : productPosts.filter(post => post.category === activeCategory);
+
+  // 2. Filter po popularnosti ako isPopular === "true"
+  const postsToDisplay = isPopular === 'true'
+    ? filteredByCategory.filter(post => post.popular === 'true') // popular je string u JSON-u
+    : filteredByCategory;
+
   return (
     <main className='grid grid-cols-3 auto-rows-auto gap-12 w-[100%] p-0 m-0'>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
-      <Product></Product>
+      {postsToDisplay.map((post) => (
+        <Product key={post.slug} post={post} />
+      ))}
     </main>
-  )
+  );
 }
 
-export default ProductList
+export default ProductList;

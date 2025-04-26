@@ -2,9 +2,10 @@ import React from 'react'
 
 function MoreBanner() {
   return (
-    <main className='w-[100%] h-[22rem] flex flex-row justify-between mt-14'>
-      <section className='flex flex-col h-[100%] w-[31%] '>
-        <div className='relative bg-[url(/christopher.jpg)] bg-cover object-top h-[80%] rounded-2xl'>
+    <main className=' w-[100%] h-[22rem] flex flex-row justify-between mt-14 overflow-hidden'>
+      <section className='group flex flex-col h-[100%] w-[31%] overflow-hidden '>
+        <div className='relative  bg-cover object-top h-[80%] rounded-2xl overflow-hidden cursor-pointer'>
+        <img src='/christopher.jpg' className='absolute w-full h-full object-cover transition-all duration-400 ease-in-out group-hover:scale-[1.02]'></img>
             <div className='absolute bg-[#ede4fc] rounded-2xl font-medium pt-0.5 pb-0.5 pl-2 pr-2'>
                 <p className='text-[0.9rem]'>Productivity</p>
             </div>
@@ -15,8 +16,9 @@ function MoreBanner() {
             </h1>
         </div>
       </section>
-      <section className='flex flex-col h-[100%] w-[31%] '>
-        <div className='relative bg-[url(/vojtech.jpg)] bg-cover h-[80%] rounded-2xl'>
+      <section className='group flex flex-col h-[100%] w-[31%] overflow-hidden cursor-pointer '>
+        <div className='relative bg-cover object-top h-[80%] rounded-2xl overflow-hidden cursor-pointer'>
+        <img src='/vojtech.jpg' className='absolute w-full h-full object-cover transition-all duration-400 ease-in-out group-hover:scale-[1.02]'></img>
             <div className='absolute bg-[#ede4fc] rounded-2xl font-medium pt-0.5 pb-0.5 pl-2 pr-2'>
                 <p className='text-[0.9rem]'>Guides</p>
             </div>
@@ -27,8 +29,9 @@ function MoreBanner() {
              </h1>
         </div>
       </section>
-      <section className='flex flex-col h-[100%] w-[31%]'>
-        <div className='relative bg-[url(/charlesdeluvio.jpg)] bg-cover h-[80%] rounded-2xl'>
+      <section className='group flex flex-col h-[100%] w-[31%] overflow-hidden '>
+        <div className='relative bg-cover object-top h-[80%] rounded-2xl overflow-hidden cursor-pointer'>
+        <img src='/charlesdeluvio.jpg' className='absolute w-full h-full object-cover transition-all duration-400 ease-in-out group-hover:scale-[1.02]'></img>
             <div className='absolute bg-[#ede4fc] rounded-2xl font-medium pt-0.5 pb-0.5 pl-2 pr-2'>
                 <p className='text-[0.9rem]'>Trends</p>
             </div>

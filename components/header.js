@@ -1,32 +1,73 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import { GoSearch } from "react-icons/go";
 import { PiBasketFill } from "react-icons/pi";
 import Link from 'next/link'
-
+import AddToCart from '../components/addToCart'; // prilagodi putanju
 
 function Header() {
+  const [showCart, setShowCart] = useState(false);
+
+  const handleToggleCart = () => {
+    setShowCart((prev) => !prev);
+  };
+
+  const handleCloseCart = () => {
+    setShowCart(false);
+  };
+
   return (
-    <main className='absolute flex flex-row items-center w-fit gap-3 p-4 bg-white rounded-xl'>
-      <section className='mr-3'>
-        <Link href="/">
-        <h2 className='text-[1.3rem] font-medium cursor-pointer'>
-        Commerce_</h2>
-        </Link>
-      </section>
-      <section >
-        <ul className='flex flex-row items-center gap-3 text-[0.9rem]'>
-            <Link href="/shop"><li className='cursor-pointer hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3'>Shop</li></Link>
-            <Link href="/collections"><li className='cursor-pointer  hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3'>Collections</li></Link>
-            <li className='cursor-pointer  hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3'>Blog</li>
-            <li className='cursor-pointer  hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3'>Support</li>
-        </ul>
-      </section>
-      <section className='flex flex-row items-center gap-3'>
-        <GoSearch className='text-[1.1rem]'/>
-        <PiBasketFill className='text-[1.3rem]'/>
-      </section>
-    </main>
-  )
+    <>
+      {/* Header meni */}
+      <main className='absolute flex flex-row items-center w-fit gap-2 p-4 bg-white rounded-xl z-50'>
+        <section className='mr-3'>
+          <Link href="/">
+            <h2 className='text-[1.3rem] font-medium cursor-pointer'>
+              Commerce_
+            </h2>
+          </Link>
+        </section>
+        <section>
+          <ul className='flex flex-row items-center gap-3 text-[0.9rem]'>
+            <Link href="/shop">
+              <li className='cursor-pointer hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+                Shop</li>
+            </Link>
+            <Link href="/collections">
+              <li className='cursor-pointer hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+                Collections</li>
+            </Link>
+            <Link href="/blog">
+              <li className='cursor-pointer hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+                Blog</li>
+            </Link>
+            <Link href="/support">
+              <li className='cursor-pointer hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+                Support</li>
+            </Link>
+          </ul>
+        </section>
+        <section className='flex flex-row items-center gap-3'>
+          <GoSearch className='text-[1.1rem]' />
+          <PiBasketFill className='text-[1.3rem] cursor-pointer' onClick={handleToggleCart} />
+        </section>
+      </main>
+
+      {/* Overlay (zatvara korpu klikom van nje) */}
+      {showCart && (
+        <div
+          className="fixed inset-0 z-50 w-[100%] bg-black opacity-80"
+          onClick={handleCloseCart}
+        />
+      )}
+
+      {/* AddToCart kartica sa animacijom */}
+      <div className='z-100' >
+      <AddToCart show={showCart} setShow={setShowCart} />
+      </div>
+      
+    </>
+  );
 }
 
-export default Header
+export default Header;

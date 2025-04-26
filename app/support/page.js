@@ -5,7 +5,11 @@ import Faq from '../../components/faq'
 function page() {
   return (
     <main className='flex flex-col gap-15 '>
-        <Hero></Hero>
+        <Hero
+        badgeText="Support"
+        heading="Help your customers."
+        subheading="Use this page to answer common questions, offer help, and guide customers to solutions quickly and efficiently."
+        />
         <div className='flex flex-col items-center'>
             <h1 className='text-[2.5rem] font-medium'>
             Frequently asked questions

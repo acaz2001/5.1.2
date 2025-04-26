@@ -9,8 +9,13 @@ function Page() {
   return (
     <main className='flex flex-col gap-[4rem]'>
      <div>
-     <Hero></Hero>
+     <Hero
+        badgeText="Blog"
+        heading="Share valuable content on a regular basis."
+        subheading="Use this space to publish engaging content that educates, inspires, and connects with your audiance."
+      />
      </div>
+     
      <BlogBanner></BlogBanner>
     <BlogGrid></BlogGrid>
       

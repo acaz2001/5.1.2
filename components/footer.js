@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Footer() {
@@ -7,35 +8,60 @@ function Footer() {
         <div className='absolute top-0 left-0'>
             <h1 className='text-[1.3rem]'>Commerce_</h1>
         </div>
-        <div>
+        <div className='relative w-fit'>
             <h1 className='text-[1.8rem] font-medium w-[55%]'>
             Join our newsletter and get 20% off your first purchase with us.
             </h1>
-            <input className='mt-3 border-[5px] bg-white border-transparent pt-2 pb-2 pl-3 rounded-2xl'
+            <input className='w-[55%] mt-3 border-[5px] bg-white border-transparent pt-2 pb-2 pl-3 rounded-2xl'
             type="text" id="fname" name="firstname" placeholder="Your email adress">
             </input>
-            <p className='mt-10 text-[#6c6474] text-[0.8rem]'>
-            Created by <span className='text-black'>Hamza Ehsan</span> © 2024    
+            <button className='bg-[#8345d8] absolute bottom-15.5 left-86.5 rounded-xl pt-2 pb-2 pl-8 pr-8 text-[1.1rem]
+            text-white font-[450]'>
+            Join
+            </button>
+            <p className='w-fit mt-10 text-[#6c6474] text-[0.8rem]'>
+            Created by <span className='text-black'>Aleksandar Živković</span> © 2024    
             </p>
         </div>
       </section>
+
+
+
       <section className='flex flex-row gap-15 pt-17 pr-20 pb-5'>
         <div >
             <ul className='flex flex-col gap-3'>
                 <li className='text-[1.1rem] font-medium'>Pages</li>
-                <li className='text-[0.90rem]'>Home</li>
-                <li className='text-[0.90rem]'>Shop</li>
-                <li className='text-[0.90rem]'>Collections</li>
-                <li className='text-[0.90rem]'>Blog</li>
+                <Link href='/'>
+                <li className='text-[0.90rem] text-[#6c6474] hover:text-black cursor-pointer'>
+                  Home</li></Link>
+                <Link href='/shop'>
+                <li className='text-[0.90rem] text-[#6c6474] hover:text-black cursor-pointer'>
+                  Shop</li></Link>
+                <Link href='/collections'>
+                <li className='text-[0.90rem] text-[#6c6474] hover:text-black cursor-pointer'>
+                  Collections</li></Link>
+                <Link href='/blog'>
+                <li className='text-[0.90rem] text-[#6c6474] hover:text-black cursor-pointer'>
+                  Blog</li></Link>
             </ul>
         </div>
         <div>
         <ul className='flex flex-col gap-3'>
                 <li className='text-[1.1rem] font-medium'>Information</li>
-                <li className='text-[0.90rem]'>Terms & Conditions</li>
-                <li className='text-[0.90rem]'>Privacy policy</li>
-                <li className='text-[0.90rem]'>Support</li>
-                <li className='text-[0.90rem]'>404</li>
+                <Link href='/terms-and-conditions'>
+                <li className='text-[0.90rem] text-[#6c6474] hover:text-black cursor-pointer'>
+                  Terms & Conditions</li>
+                </Link>
+                <Link href= '/privacy-policy'>
+                <li className='text-[0.90rem] text-[#6c6474] hover:text-black cursor-pointer '>
+                  Privacy policy</li>
+                </Link>
+                <Link href= '/support'>
+                <li className='text-[0.90rem] text-[#6c6474] hover:text-black cursor-pointer'>
+                  Support</li>
+                </Link>
+                <li className='text-[0.90rem] text-[#6c6474] hover:text-black cursor-pointer'>
+                  404</li>
             </ul>
         </div>
       </section>

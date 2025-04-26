@@ -1,5 +1,6 @@
 import React from 'react'
 import { LuArrowUpRight } from "react-icons/lu";
+import Link from 'next/link';
 
 function BlogBanner() {
   return (
@@ -22,9 +23,11 @@ function BlogBanner() {
                         <p className='text-[0.8rem] text-[#6c6474] font-normal'>Graphic Designer</p>
                     </div>
                 </div>
-                <div className='absolute bottom-0 right-0 bg-[#ede4fc] p-3 rounded-3xl'>
-                    <LuArrowUpRight className='text-[1.4rem]'/>
+                <Link href={`/blog/how-to-make-your-social-media`}>
+                <div className='absolute bottom-0 right-0 bg-[#ede4fc] p-3 rounded-3xl transition-transform duration-400 ease-in-out cursor-pointer hover:rotate-45'>
+                    <LuArrowUpRight className='text-[1.4rem] '/>
                 </div>
+                </Link>
             </div>
         </section>
     </main>

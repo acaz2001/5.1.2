@@ -8,7 +8,11 @@ import Hero from '../../components/hero'
 function Page() {
   return (
     <main>
-          <Hero></Hero>
+          <Hero
+            badgeText="Collections"
+            heading="Curate your products into simple collections"
+            subheading="Use this page to group your products into simple collections, making it easy for customers to explore."
+          />
 
               <div className='mt-10'>
               <OurCollections></OurCollections>

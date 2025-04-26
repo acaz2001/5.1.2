@@ -2,6 +2,8 @@ import { Geist, Geist_Mono, Inter,Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import AddToCart from "../components/addToCart";
+
 
 const inter = Inter({
   subsets: ['latin'],
@@ -34,9 +36,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${roboto.className} antialiased pl-5 pr-5 pt-5 relative`}
       >
-        <Header className='w-[100%]'></Header>
+
+        <Header className='w-[100%] z-100'></Header>
+        <div className="absolute right-0">
+        <AddToCart></AddToCart>
+        </div>
+        
         {children}
         <Footer></Footer>
+
       </body>
     </html>
   );
