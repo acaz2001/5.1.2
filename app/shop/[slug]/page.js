@@ -9,6 +9,8 @@ import Testimonials from '../../../components/testimonials';
 import productPosts from '../../../data/products.json';
 import ProductClient from '../../../components/ProductClient';
 
+
+
 export async function generateStaticParams() {
     return productPosts.map((product) => ({
       slug: product.slug,
