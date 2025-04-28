@@ -49,10 +49,13 @@ export const CartProvider = ({ children }) => {
   };
 
   // ✅ Povećavanje količine
-  const increaseQuantity = (id, name, image) => {
+  const increaseQuantity = (id, name, image, variant) => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
-        item.id === id && item.name === name && item.image === image
+        item.id === id &&
+        item.name === name &&
+        item.image === image &&
+        item.variant === variant
           ? { ...item, quantity: item.quantity + 1 }
           : item
       )
@@ -60,11 +63,14 @@ export const CartProvider = ({ children }) => {
   };
 
   // ✅ Smanjivanje količine
-  const decreaseQuantity = (id, name, image) => {
+  const decreaseQuantity = (id, name, image, variant) => {
     setCartItems((prevItems) =>
       prevItems
         .map((item) =>
-          item.id === id && item.name === name && item.image === image
+          item.id === id &&
+          item.name === name &&
+          item.image === image &&
+          item.variant === variant
             ? { ...item, quantity: item.quantity - 1 }
             : item
         )
@@ -73,10 +79,16 @@ export const CartProvider = ({ children }) => {
   };
 
   // ✅ Brisanje proizvoda iz korpe
-  const removeFromCart = (id, name, image) => {
+  const removeFromCart = (id, name, image, variant) => {
     setCartItems((prevItems) =>
       prevItems.filter(
-        (item) => !(item.id === id && item.name === name && item.image === image)
+        (item) =>
+          !(
+            item.id === id &&
+            item.name === name &&
+            item.image === image &&
+            item.variant === variant
+          )
       )
     );
   };

@@ -46,14 +46,15 @@ function AddToCart({ show, setShow }) {
                 <img src={item.image} alt={item.name} className='w-full h-full object-contain' />
               </div>
 
-              <div className='flex flex-col flex-1 gap-4'>
+              <div className='flex flex-col flex-1 gap-6'>
                 <div className='flex flex-row justify-between'>
-                  <h1 className='font-[450]'>{item.name}</h1>
+                  <div className='flex flex-col gap-1'>
+                    <h1 className='font-[450]'>{item.name}</h1>
+                    <p className='text-sm text-gray-500'>{item.variant}</p> {/* Prikazuje varijantu */}
+                  </div>
                   <p className='font-[450]'>{item.price} RSD</p>
                 </div>
-                <div>
-                  <p className='text-sm text-gray-500'>{item.variant}</p> {/* Prikazuje varijantu */}
-                </div>
+                
 
                 <div className='flex flex-row justify-between items-center'>
                   <div className='flex flex-row gap-2 items-center'>
@@ -97,7 +98,7 @@ function AddToCart({ show, setShow }) {
           <Link href="/cart" className='w-full'>
             <button
               onClick={() => setShow(false)}
-              className='text-white w-full pt-3 pb-3 text-[0.9rem] font-[450] rounded-3xl'
+              className='text-white w-full pt-3 pb-3 text-[0.9rem] font-[450] rounded-3xl cursor-pointer'
             >
               Checkout
             </button>
