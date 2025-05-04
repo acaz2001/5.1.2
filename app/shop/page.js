@@ -18,17 +18,20 @@ function Page() {
         subheading="Use this page to group your products into simple collections, making it easy for customers to explore."
       />
 
-      <section className='flex flex-row justify-between mt-10 mb-20'>
+      <section className='lg:flex lg:flex-row lg:justify-between mt-10 mb-20
+      md:flex md:flex-row md:justify-between
+      sm:flex sm:flex-col'>
         {/* Sidebar */}
-        <div className='w-[18%]'>
+        <div className='lg:w-[18%] md:w-[18%] w-[100%] mb-10'>
           <div>
             <h1 className='text-[1.3rem] font-medium'>Shop</h1>
-            <p className='text-[1rem] text-[#6c6474] font-normal mt-1'>
+            <p className='text-[1rem] w-[70%] pt-1 lg:text-[1rem] text-[#6c6474] font-normal mt-1
+            sm:w-[100%] sm:text-[0.9rem]'>
               Split your products into categories so visitors can easily navigate.
             </p>
           </div>
 
-          <div className='flex flex-col gap-4 mt-5'>
+          <div className='flex flex-col gap-4 mt-5 w-[100%]'>
             {categories.map((cat) => (
               <div
                 key={cat}
@@ -53,7 +56,7 @@ function Page() {
         </div>
 
         {/* Products */}
-        <div className='w-[78%] flex'>
+        <div className='w-[100%] lg:w-[78%] flex'>
           <ProductList activeCategory={activeCategory} />
         </div>
       </section>

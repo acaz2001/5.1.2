@@ -47,24 +47,48 @@ export default function Home() {
     <main>
         <section className="custom-box">
         {/*<div class="cutout"></div> */}
-          <div className="bg-[url(/clark-van-der-beken-Tk0B3Dfkf_4-unsplash.jpg)] rounded-2xl flex flex-col gap-[2rem] pl-20 pt-38 pb-30 pr-30">
-            <div className="bg-white w-fit p-1 pl-3 pr-3 rounded-2xl flex flex-row items-center gap-[0.5rem]">
+              {/* Sekcija sa maskom */}
+              <svg width="0" height="0">
+                <defs>
+                  <clipPath id="clip-path-1" clipPathUnits="objectBoundingBox">
+                  <path d="M0.98923 0.001968 C0.995697 0.002599 0.998337 0.0159 0.998853 0.022473 C0.999107 0.340297 0.999546 0.978309 0.999238 0.987773 C0.99893 0.997237 0.99475 0.999076 0.992694 0.998814 H0.010401 C0.003935 0.995028 0.001292 0.983566 0.000778 0.978309 C0.000907 0.699129 0.001086 0.136195 0.000778 0.117898 C0.00047 0.099602 0.008605 0.09345 0.012711 0.092662 H0.388384 C0.396082 0.092662 0.398007 0.083198 0.398007 0.078466 C0.397878 0.069791 0.397699 0.046921 0.398007 0.024838 C0.398315 0.002756 0.408143 0.000391 0.413018 0.001968 C0.602395 0.001705 0.982764 0.001337 0.98923 0.001968 Z" />
+                  </clipPath>
+                </defs>
+              </svg>
+          <div
+                style={{
+                  clipPath: 'url(#clip-path-1)',
+                  WebkitClipPath: 'url(#clip-path-1)',
+                }}
+              className="bg-[url(/clark-van-der-beken-Tk0B3Dfkf_4-unsplash.jpg)] pt-38 pl-8 bg-cover w-full h-[600px] rounded-2xl
+              lg:pt-38 lg:pl-15
+              md:pt-38 md:pl-15"
+            >
+            <div className="bg-white w-fit p-1 pl-3 pr-3 rounded-2xl flex flex-row items-center gap-[0.5rem] ">
               <FaShopify/>
-              <p className="text-[0.8rem] font-medium">Powered by Shopify</p>
+              <p className="text-[0.8rem] font-medium ">Powered by Shopify</p>
             </div>
     
             <div>
-              <h1 style={{width:'65%', lineHeight:'1.1'}} className="text-[4.2rem] tracking-tight">The <span className="text-[#8345d8]">beautiful</span> way to sell anything with Framer.</h1>
-              <p style={{width:'40%'}} className="text-[1.2rem] text-[#6c6474] mt-6" >Designed with Framer, this template makes it easy to turn your website into a powerful ecommerce store.</p>
+              <h1 style={{lineHeight:'1.1'}} 
+              className="text-[2.6rem] tracking-tight font-[450] mt-7 w-[90%]
+              lg:text-[3.8rem] lg:w-[68%]
+              md:w-[65%]">
+                The <span className="text-[#8345d8]">beautiful</span> way to sell anything with Framer.
+              </h1>
+              <p className="text-[1.1rem] text-[#6c6474] mt-3 w-[80%]
+              lg:w-[40%] md:w-[55%]" >
+                Designed with Framer, this template makes it easy to turn your website into a powerful ecommerce store.
+              </p>
             </div>
             <Link href='/shop'>
-            <div className=
-            "group relative  w-fit rounded-3xl flex flex-row items-center gap-[0.5rem]  pt-1 pb-4 ">
+            <div className="group relative w-fit rounded-3xl flex flex-row items-center gap-[0.5rem] mt-6 pt-2 pb-3 ">
               <LuArrowUpRight 
-              className="absolute right-3 text-[1.2rem] z-10 transition-transform duration-400 ease-in-out group-hover:rotate-45" />
+              className="absolute right-[13px] text-[1rem] z-10 transition-transform duration-400 ease-in-out group-hover:rotate-45" />
               <div className="absolute bg-white rounded-3xl w-[100%] h-full z-1 opacity-50"></div>
-              <h4 className="text-[1rem] pl-7 z-10 pr-15 font-medium">Shop Products</h4>
-              <div className='absolute right-0.5 bg-white rounded-full w-10 p-5 z-9 transition-all duration-500 
+              <h4 className="text-[0.9rem] w-fit pl-7 z-10 pr-15 font-medium overflow-hidden">
+                Shop Products</h4>
+              <div className='absolute right-0.5 bg-white rounded-full w-10 p-[19px] z-9 transition-all duration-800 
               ease-in-out group-hover:w-[98%]' />
 
             </div>
@@ -73,37 +97,40 @@ export default function Home() {
         </section>
 
         <section className="flex flex-row items-center justify-between mt-8 mb-8">
-          <div>
+          <div className="lg:w-fit md:w-fit sm:w-fit w-[60%]">
             <h1 className="text-[1.5rem] font-medium">Most Popular</h1>
             <p className="text-[#6c6474] mt-1.5">
             Showcase your most popular products, front and center.
             </p>
           </div>
           
-          <div className="flex flex-row items-center gap-[0.5rem] mr-3 cursor-pointer pt-1.5 pb-1.5 pl-4 pr-3 
-          rounded-full hover:bg-[#ede4fc]">
+          <div className="flex flex-row items-center gap-[0.5rem] mr-3 cursor-pointer pt-1.5 pb-1.5 pl-5 pr-3 
+          rounded-full transition duration-300 ease-in-out hover:bg-[#ede4fc]">
             <Link href='/shop'>
-            <p className="font-medium">View All</p>
+            <p className="font-medium ">View All</p>
             </Link>
             <GoArrowRight className="text-[1.1rem] font-bold"/>
           </div>
           
         </section>
 
-        <ProductList isPopular="true" />
+        <ProductList isPopular="true"/>
 
         <Testimonials></Testimonials>
 
 
         <section className="flex flex-row items-center justify-between mt-8 mb-8">
-          <div>
+          <div className="lg:w-fit md:w-fit sm:w-fit w-[60%]">
             <h1 className="text-[1.5rem] font-medium">Our Collections</h1>
-            <p className="text-[#6c6474] mt-1.5">
+            <p className="text-[#6c6474] mt-1.5 font-[450]">
             Showcase all of the different collections you have to offer.
             </p>
           </div>
-          <div className="flex flex-row items-center gap-[0.5rem] mr-3 cursor-pointer pt-1.5 pb-1.5 pl-4 pr-3 rounded-full hover:bg-[#ede4fc]">
-            <p className="font-medium">View All</p>
+          <div className="flex flex-row items-center gap-[0.5rem] mr-3 cursor-pointer pt-1.5 pb-1.5 pl-5 pr-3 
+          rounded-full transition duration-300 ease-in-out hover:bg-[#ede4fc]">
+            <Link href='/collections'>
+            <p className="font-medium ">View All</p>
+            </Link>
             <GoArrowRight className="text-[1.1rem] font-bold"/>
           </div>
         </section>
@@ -117,7 +144,7 @@ export default function Home() {
         
 
         <section className="flex flex-col items-center mt-10">
-          <h1 className="text-[2.5rem] font-medium">
+          <h1 className="lg:text-[2.5rem] md::text-[2.5rem] text-[2rem] font-medium text-center">
           Highlight what makes you stand out
           </h1>
           <p className="text-[#6c6474] mt-4">
@@ -139,16 +166,18 @@ export default function Home() {
 
 
         <section className="flex flex-row items-center justify-between mt-20  mb-8">
-          <div>
+          <div className="lg:w-fit md:w-fit sm:w-fit w-[60%]">
             <h1 className="text-[1.5rem] font-medium">Explore the blog</h1>
             <p className="text-[#6c6474] mt-1.5 font-normal">
             Share insights, boost SEO, and build trust with your audience.
             </p>
           </div>
-          <div className="flex flex-row items-center gap-[0.5rem] mr-3 cursor-pointer pt-1.5 pb-1.5 pl-4 pr-3 rounded-full hover:bg-[#ede4fc]">
+          <Link href='/blog'>
+          <div className="flex flex-row items-center gap-[0.5rem] mr-3 cursor-pointer pt-1.5 pb-1.5 pl-5 pr-3 rounded-full transition duration-300 ease-in-out hover:bg-[#ede4fc]">
             <p className="font-medium">View Posts</p>
             <GoArrowRight className="text-[1.1rem] font-bold"/>
           </div>
+          </Link>
         </section>
 
         <BlogBanner></BlogBanner>

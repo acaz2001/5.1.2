@@ -3,19 +3,24 @@ import React from 'react'
 
 function Footer() {
   return (
-    <main className='relative mt-12 flex flex-row justify-between items-start  bg-[#ede4fc] rounded-2xl'>
-      <section className='flex flex-col relative pt-17 pl-15 pr-10 pb-5'>
+    <main className='relative mt-12 flex flex-col justify-between items-start  bg-[#ede4fc] rounded-2xl
+    lg:flex-row
+    md:flex-row'>
+      <section className='flex flex-col relative pt-17 pr-10 pb-5 pl-5
+      lg:pl-15
+      md:pl-15 '>
         <div className='absolute top-0 left-0'>
             <h1 className='text-[1.3rem]'>Commerce_</h1>
         </div>
         <div className='relative w-fit'>
-            <h1 className='text-[1.8rem] font-medium w-[55%]'>
-            Join our newsletter and get 20% off your first purchase with us.
+            <h1 className='text-[1.6rem] font-medium w-[100%]
+            lg:w-[55%] md:-w[90%]'>
+            Join our newsletter and get 20% off your first purchase.
             </h1>
             <input className='w-[55%] mt-3 border-[5px] bg-white border-transparent pt-2 pb-2 pl-3 rounded-2xl'
             type="text" id="fname" name="firstname" placeholder="Your email adress">
             </input>
-            <button className='bg-[#8345d8] absolute bottom-15.5 left-86.5 rounded-xl pt-2 pb-2 pl-8 pr-8 text-[1.1rem]
+            <button className='bg-[#8345d8] absolute bottom-15.5 left-[247px] rounded-xl pt-2 pb-2 pl-8 pr-8 text-[1.1rem]
             text-white font-[450]'>
             Join
             </button>
@@ -27,7 +32,8 @@ function Footer() {
 
 
 
-      <section className='flex flex-row gap-15 pt-17 pr-20 pb-5'>
+      <section className='flex flex-row gap-15 pl-8  pr-20 pb-5
+      lg:pt-17 md:pt-17'>
         <div >
             <ul className='flex flex-col gap-3'>
                 <li className='text-[1.1rem] font-medium'>Pages</li>

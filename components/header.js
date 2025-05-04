@@ -19,37 +19,37 @@ function Header() {
   return (
     <>
       {/* Header meni */}
-      <main className='absolute flex flex-row items-center w-fit gap-2 p-4 bg-white rounded-xl z-50'>
+      <main className='absolute flex flex-row items-center w-fit gap-1 px-4 py-[10px] bg-transparent rounded-xl z-50'>
         <section className='mr-3'>
           <Link href="/">
-            <h2 className='text-[1.3rem] font-medium cursor-pointer'>
+            <h2 className='text-[1.2rem] font-medium cursor-pointer'>
               Commerce_
             </h2>
           </Link>
         </section>
         <section>
-          <ul className='flex flex-row items-center gap-3 text-[0.9rem]'>
+          <ul className='flex flex-row items-center gap-1 text-[0.9rem]'>
             <Link href="/shop">
-              <li className='cursor-pointer hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+              <li className='cursor-pointer text-[0.8rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
                 Shop</li>
             </Link>
             <Link href="/collections">
-              <li className='cursor-pointer hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+              <li className='cursor-pointer text-[0.8rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
                 Collections</li>
             </Link>
             <Link href="/blog">
-              <li className='cursor-pointer hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+              <li className='cursor-pointer text-[0.8rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
                 Blog</li>
             </Link>
             <Link href="/support">
-              <li className='cursor-pointer hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+              <li className='cursor-pointer text-[0.8rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
                 Support</li>
             </Link>
           </ul>
         </section>
-        <section className='flex flex-row items-center gap-3'>
-          <GoSearch className='text-[1.1rem]' />
-          <PiBasketFill className='text-[1.3rem] cursor-pointer' onClick={handleToggleCart} />
+        <section className='flex flex-row items-center gap-3 ml-2'>
+          <GoSearch className='text-[1rem]' />
+          <PiBasketFill className='text-[1.2rem] cursor-pointer' onClick={handleToggleCart} />
         </section>
       </main>
 

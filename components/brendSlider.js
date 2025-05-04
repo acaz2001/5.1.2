@@ -18,10 +18,10 @@ function BrendSlider() {
     <div className="relative w-[100%] overflow-hidden py-6 z-10 ">
       {/* Blur overlays left & right */}
       {/* Left blur */}
-<div className="absolute top-0 left-0 h-full w-32 bg-gradient-to-r from-[#f9f6fe] via-[#f9f6fe] to-transparent z-10 pointer-events-none" />
+<div className="absolute top-0 left-20 lg:top-0 lg:left-0 md:top-0 md:left-0 sm:top-0 sm:left-0 h-full w-32  bg-gradient-to-r from-[#f9f6fe] via-[#f9f6fe] to-transparent z-10 pointer-events-none" />
 
 {/* Right blur */}
-<div className="absolute top-0 right-0 h-full w-30 bg-gradient-to-l from-[#f9f6fe] via-[#f9f6fe] to-transparent z-10 pointer-events-none " />
+<div className="absolute top-0 right-20 lg:top-0 lg:right-0 md:top-0 md:right-0 sm:top-0 sm:right-0 h-full w-30 bg-gradient-to-l from-[#f9f6fe] via-[#f9f6fe] to-transparent z-10 pointer-events-none " />
 
       <div className="flex w-max animate-slide gap-12 px-24">
         {[...brandLogos, ...brandLogos].map((logo, i) => (

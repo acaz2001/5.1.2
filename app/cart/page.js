@@ -43,7 +43,7 @@ export default function CartPage() {
   }
 
   return (
-    <main className="flex flex-col p-8 gap-8 min-h-[90vh]">
+    <main className="flex flex-col p-8 gap-8 min-h-[90vh] mt-12">
       <h1 className="text-3xl font-bold">Shopping Cart</h1>
 
       <div className="flex flex-col gap-6">

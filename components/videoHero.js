@@ -35,7 +35,8 @@ function VideoHero() {
 
       {/* OVERLAY TEKST */}
       <div className="absolute bottom-0 w-full h-full flex items-center justify-center z-10">
-        <h1 className="text-white text-[3rem] w-[55%] leading-[1.2] font-medium text-center drop-shadow-lg">
+        <h1 className="text-white lg:text-[3rem] md:text-[3rem] sm:text-[3rem] text-[2.3rem] 
+        lg:w-[65%] md::w-[55%] sm::w-[55%] w-[90%] leading-[1.2] font-medium text-center drop-shadow-lg">
           Showcase your products in action and outline their benefits.
         </h1>
       </div>

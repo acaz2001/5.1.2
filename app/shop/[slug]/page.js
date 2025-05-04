@@ -66,13 +66,15 @@ function Page({ params }) {
         </section>
 
 
-        <section className='flex flex-row gap-[5%] w-[100%]  mt-10'>
+        <section className='flex flex-col lg:flex-row gap-[3%] w-[100%] h-[750] mb-15 mt-15'>
             <div style={{ backgroundImage: `url(/${product.infoImg1}.jpg)` }}
-             className='w-[100%] rounded-2xl'>
+             className='w-[100%] h-[70%] rounded-2xl md:h-[75%] lg:h-[100%]'>
             </div>
 
-            <div className='w-[100%] h-[100%] flex flex-col gap-4 pt-62 pb-62'>
-                <h1 className='text-[2.8rem] font-[450]'>{product.infoTitle1}</h1>
+            <div className='w-[100%] h-[30%] md:h-[25%] flex flex-col gap-4 lg:pt-62 lg:pb-62'>
+                <h1 className='text-[2.4rem] lg:text-[2.8rem] md:text-[2.8rem] font-[450] leading-[1.2]'>
+                  {product.infoTitle1}
+                </h1>
                 <p className='text-[#6c6474] text-[1.1rem]'>
                 {product.infoDesc1} 
                 </p>
@@ -85,16 +87,16 @@ function Page({ params }) {
         </section>
 
 
-        <section className='flex flex-row gap-[5%] w-[100%] mt-10'>
+        <section className='flex flex-col lg:flex-row gap-[5%] w-[100%] h-[750] mt-10'>
             <div 
-            className='w-[100%] h-[100%] flex flex-col gap-4 pt-62 pb-62'>
-                <h1 className='text-[2.8rem] font-[450] leading-[1.1] '>{product.infoTitle2}</h1>
+            className='w-[100%] h-[30%] md:h-[25%] flex flex-col gap-4 lg:pt-62 lg:pb-62'>
+                <h1 className='text-[2.4rem] lg:text-[2.8rem] md:text-[2.8rem] font-[450] leading-[1.2] '>{product.infoTitle2}</h1>
                 <p className='text-[#6c6474] text-[1.1rem]'>
                 {product.infoDesc2} 
                 </p>
             </div>
             <div className=
-            'bg-[url(/clark-van-der-beken-Tk0B3Dfkf_4-unsplash.jpg)] w-[100%] rounded-2xl'
+            'bg-[url(/clark-van-der-beken-Tk0B3Dfkf_4-unsplash.jpg)] w-[100%] h-[70%] rounded-2xl md:h-[75%] lg:h-[100%]'
             style={{ backgroundImage: `url(/${product.infoImg2}.jpg)` }}>
             </div>
         </section>

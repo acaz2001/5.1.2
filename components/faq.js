@@ -42,7 +42,8 @@ function Faq() {
   };
 
   return (
-    <main className='w-[65%] flex flex-col gap-5'>
+    <main className='w-[100%] flex flex-col gap-5
+    lg:w-[65%] md:w-[65%] sm:w-[100%]'>
       {questions.map(({ id, question, answer }) => {
         const isOpen = openItems.includes(id);
         return (

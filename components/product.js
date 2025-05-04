@@ -7,19 +7,25 @@ function Product({ post }) {
   if (!post) return null;
 
   return (
-    <main className='group w-[100%] '>
+    <>
+    <main className='group w-[100%] lg:w-[100%]'>
+      <Link href={`/shop/${post.slug}`}> 
       <div className='bg-[#f9f6fe] flex items-center justify-center relative w-[100%] h-[82%] rounded-2xl cursor-pointer'>
         <img src={`/${post["image"]}.png`} 
         className='w-[90%] p-5 transition-all duration-400 ease-in-out group-hover:scale-[1.05]
         object-cover object-center'>
         </img>
-        <div className='absolute bottom-0 right-0'>
-            <Link href={`/shop/${post.slug}`}>
+        {/*
+                <div className='absolute bottom-0 right-0'>
+            
             <LuArrowUpRight className=
             'text-[1.6rem] transition-transform duration-400 ease-in-out group-hover:rotate-45'/>
             </Link>
         </div>
+        */}
+
       </div>
+      </Link>
       <div className='mt-2'>
         <h1 className='text-[1.3rem] font-medium'>
         {post.name}
@@ -30,6 +36,8 @@ function Product({ post }) {
       </div>
 
     </main>
+    
+    </>
   )
 }
 

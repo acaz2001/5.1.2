@@ -14,8 +14,8 @@ function ProductList({ activeCategory = 'All', isPopular = 'false' }) {
     : filteredByCategory;
 
   return (
-    <main className='grid grid-cols-3 auto-rows-auto gap-12 w-[100%] p-0 m-0
-    md:max-md:grid-cols-3'>
+    <main className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 
+    gap-8 auto-rows-auto w-[100%] p-0 m-0'>
       {postsToDisplay.map((post) => (
         <Product key={post.slug} post={post} />
       ))}

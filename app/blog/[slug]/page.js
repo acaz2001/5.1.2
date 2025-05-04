@@ -12,11 +12,14 @@ export async function generateStaticParams() {
     if (!post) return <p>Blog post nije pronađen.</p>;
 
     return (
-    <main className='flex flex-col   items-start w-[100%] '>
-    <section className='flex flex-col gap-5 pt-40 bg-[#f9f6fe] px-65'>
+    <main className='flex flex-col items-start w-[100%] '>
+    <section className='flex flex-col gap-5 pt-40 bg-[#f9f6fe] px-5
+    lg:px-65 md:px-20'>
         <div className='flex flex-col gap-5'>
-            <h1 className=
-            'text-[2.8rem] font-medium leading-[1.15]'>{post.title}</h1>
+            <h1 className='text-[2.4rem] font-medium leading-[1.15]
+            lg:text-[2.8rem] mdtext-[2.8rem]'>
+                {post.title}
+            </h1>
             <p className=
             'text-[1.1rem] text-[#6c6474]'>{post.desc}</p>
         </div>
@@ -36,7 +39,8 @@ export async function generateStaticParams() {
     </section> 
 
     
-    <section className='flex flex-col pt-10 px-65 gap-4'>
+    <section className='flex flex-col pt-10 px-5 gap-4
+    lg:px-65 md:px-20'>
         <p className='text-[1.1rem]'>{post.content}</p>
         <h1 className='text-[1.8rem] font-medium'>{post.section1}</h1>
         <p className='text-[1.1rem]'>{post.text1}</p>

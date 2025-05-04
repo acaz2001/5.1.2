@@ -5,7 +5,10 @@ import blogPosts from '../data/blogData.json';
 
 function BlogGrid() {
   return (
-    <main className='w-[100%] h-fit grid grid-cols-3 grid-rows-auto gap-5'>
+    <main className='w-full h-fit grid grid-cols-1
+    lg:grid-cols-3 lg:grid-rows-auto gap-5
+    md:grid-cols-2
+    '>
       {blogPosts.map((post) => (
         <BlogGridCard key={post.slug} post={post} />
       ))}
