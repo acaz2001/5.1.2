@@ -52,7 +52,7 @@ function Faq() {
             className='relative bg-[#f9f6fe] rounded-2xl font-medium text-[1.2rem] cursor-pointer overflow-hidden transition-all duration-300'
           >
             <div className='p-6' onClick={() => toggleAnswer(id)}>
-              <h1 className='flex justify-between items-center'>
+              <h1 className='flex justify-between items-center text-[1rem] lg:text-[1.2rem] md:text-[1.2rem] sm:text-[1.2rem]'>
                 {question}
                 <IoIosArrowUp
                   className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
@@ -64,7 +64,7 @@ function Faq() {
                   isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <p className='mt-4 text-[#6c6474] text-[1rem] font-normal'>{answer}</p>
+                <p className='mt-4 text-[#6c6474] text-[0.8rem] lg:text-[1rem] md:text-[1rem] sm:text-[1rem] font-normal'>{answer}</p>
               </div>
             </div>
           </section>

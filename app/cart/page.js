@@ -25,7 +25,7 @@ export default function CartPage() {
 
     const data = await response.json();
 
-    await stripe.redirectToCheckout({ url: data.url });
+    await stripe.redirectToCheckout({ sessionId: data.id });
   };
 
   if (cartItems.length === 0) {

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { PiCursorFill } from "react-icons/pi";
 import FaqShop from './faqShop';
 import Link from 'next/link';
@@ -12,6 +12,36 @@ function ProductClient({ product }) {
     product.variants ? product.variants[0] : null
   );
 
+  const mainImageRef = useRef(null);
+  const imageRef = useRef(null);
+
+    useEffect(() => {
+    const mainImage = mainImageRef.current;
+    const image = imageRef.current;
+
+    if (!mainImage || !image) return;
+
+    const handleMouseMove = (e) => {
+      const rect = mainImage.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      image.style.transformOrigin = `${x}px ${y}px`;
+      image.style.transform = 'scale(2)';
+    };
+
+    const resetZoom = () => {
+      image.style.transform = 'scale(1)';
+    };
+
+    mainImage.addEventListener('mousemove', handleMouseMove);
+    mainImage.addEventListener('mouseleave', resetZoom);
+
+    return () => {
+      mainImage.removeEventListener('mousemove', handleMouseMove);
+      mainImage.removeEventListener('mouseleave', resetZoom);
+    };
+  }, []);
+
   const addToCartHandler = () => {
     addToCart({
       id: product._id,
@@ -22,6 +52,7 @@ function ProductClient({ product }) {
       quantity: 1
     });
   };
+
 
   return (
     <main className='w-full'>
@@ -47,12 +78,12 @@ function ProductClient({ product }) {
           </div>
 
           {/* Main Image */}
-          <div className='relative bg-[#f9f6fe] w-[100%] lg:w-[90%] md:w-[90%] p-20 rounded-3xl'>
+          <div ref={mainImageRef} className=' relative bg-[#f9f6fe] w-[100%] lg:w-[90%] md:w-[90%] p-20 rounded-3xl overflow-hidden'>
             <div className='absolute top-0 right-0 flex flex-col items-center gap-1'>
               <PiCursorFill className='text-[0.8rem]' />
               <p className='text-[0.8rem] text-center w-[60%] leading-[1.1]'>Hover to zoom</p>
             </div>
-            <img src={`/${selectedVariant.image}.png`} />
+            <img ref={imageRef} src={`/${selectedVariant.image}.png`} />
           </div>
         </div>
 
@@ -111,9 +142,13 @@ function ProductClient({ product }) {
             >
               Add to Cart
             </button>
-            <button className='bg-[#ebebeb] text-[1rem] font-medium rounded-2xl pt-3 pb-3 cursor-pointer'>
+            {/* 
+            <button 
+            className='bg-[#ebebeb] text-[1rem] font-medium rounded-2xl pt-3 pb-3 cursor-pointer'>
               Buy Now
-            </button>
+            </button>            
+            */}
+
           </div>
 
           <div className='mt-8 w-full'>

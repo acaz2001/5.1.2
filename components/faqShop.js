@@ -38,7 +38,7 @@ function FaqShop() {
       <div className='border-b relative '>
         <div
           onClick={toggleWarranty}
-          className='flex flex-row justify-between items-center cursor-pointer'
+          className='flex flex-row justify-between items-center cursor-pointer '
         >
           <h3 className='text-[1rem] font-[450] pb-4'>Warranty</h3>
           <IoIosArrowUp
@@ -48,7 +48,7 @@ function FaqShop() {
           />
         </div>
         {warrantyOpen && (
-          <p className='text-[0.8rem] font-[450] text-[#6c6474] mt-[-5] pb-3'>
+          <p className='text-[0.8rem] font-[450] text-[#6c6474] mt-[-5] pb-3 '>
             Every purchase is backed by our commitment to quality. Enjoy peace of mind with a 90-day warranty, ensuring your product delivers satisfaction and reliability.
           </p>
         )}

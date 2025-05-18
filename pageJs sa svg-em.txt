@@ -45,35 +45,38 @@ export default function Home() {
   
   return (
     <main>
-        <section className="custom-box rounded-2xl">
+        <section className="custom-box">
+        {/*<div class="cutout"></div> */}
+              {/* Sekcija sa maskom */}
+              <svg width="0" height="0">
+                <defs>
+                  <clipPath id="clip-path-1" clipPathUnits="objectBoundingBox">
+                  <path d="M0.98923 0.001968 C0.995697 0.002599 0.998337 0.0159 0.998853 0.022473 C0.999107 0.340297 0.999546 0.978309 0.999238 0.987773 C0.99893 0.997237 0.99475 0.999076 0.992694 0.998814 H0.010401 C0.003935 0.995028 0.001292 0.983566 0.000778 0.978309 C0.000907 0.699129 0.001086 0.136195 0.000778 0.117898 C0.00047 0.099602 0.008605 0.09345 0.012711 0.092662 H0.388384 C0.396082 0.092662 0.398007 0.083198 0.398007 0.078466 C0.397878 0.069791 0.397699 0.046921 0.398007 0.024838 C0.398315 0.002756 0.408143 0.000391 0.413018 0.001968 C0.602395 0.001705 0.982764 0.001337 0.98923 0.001968 Z" />
+                  </clipPath>
+                </defs>
+              </svg>
           <div
-              className="relative pt-38 pl-8 bg-cover w-full h-[600px] rounded-2xl
+                style={{
+                  clipPath: 'url(#clip-path-1)',
+                  WebkitClipPath: 'url(#clip-path-1)',
+                }}
+              className="bg-[url(/clark-van-der-beken-Tk0B3Dfkf_4-unsplash.jpg)] pt-38 pl-8 bg-cover w-full h-[600px] rounded-2xl
               lg:pt-38 lg:pl-15
               md:pt-38 md:pl-15"
             >
-                <video
-                  className="absolute top-0 left-0 w-full h-full object-cover z-1 rounded-2xl"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                >
-                  <source src="/81656-576083123.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-            <div className="bg-white w-fit p-1 pl-3 pr-3 rounded-2xl flex flex-row items-center gap-[0.5rem] z-10 relative">
-              <FaShopify className="z-100 "/>
-              <p className="text-[0.8rem] font-medium z-100  ">Powered by Shopify</p>
+            <div className="bg-white w-fit p-1 pl-3 pr-3 rounded-2xl flex flex-row items-center gap-[0.5rem] ">
+              <FaShopify/>
+              <p className="text-[0.8rem] font-medium ">Powered by Shopify</p>
             </div>
     
-            <div className="z-10 relative">
+            <div>
               <h1 style={{lineHeight:'1.1'}} 
-              className=" z-100 text-[2.6rem] tracking-tight font-[450] mt-7 w-[90%]
+              className="text-[2.6rem] tracking-tight font-[450] mt-7 w-[90%]
               lg:text-[3.8rem] lg:w-[68%]
               md:w-[65%]">
-                The <span className="text-[#8345d8] z-10">beautiful</span> way to sell anything with Framer.
+                The <span className="text-[#8345d8]">beautiful</span> way to sell anything with Framer.
               </h1>
-              <p className="text-[1.1rem] text-[#6c6474] mt-3 w-[80%] z-100
+              <p className="text-[1.1rem] text-[#6c6474] mt-3 w-[80%]
               lg:w-[40%] md:w-[55%]" >
                 Designed with Framer, this template makes it easy to turn your website into a powerful ecommerce store.
               </p>

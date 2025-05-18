@@ -15,7 +15,7 @@ function MoreBanner() {
             className='absolute w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-[1.02]'
             alt='Productivity'
           />
-          <div className='absolute bg-[#ede4fc] rounded-2xl font-medium pt-0.5 pb-0.5 pl-2 pr-2'>
+          <div className='absolute bg-[#ede4fc] font-medium pt-0.5 pb-0.5 pl-2 pr-2 rounded-tr-[16px] rounded-tl-[16px] rounded-br-[16px] rounded-bl-none'>
             <p className='text-[0.9rem]'>Productivity</p>
           </div>
         </div>
@@ -32,7 +32,7 @@ function MoreBanner() {
             className='absolute w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-[1.02]'
             alt='Guides'
           />
-          <div className='absolute bg-[#ede4fc] rounded-2xl font-medium pt-0.5 pb-0.5 pl-2 pr-2'>
+          <div className='absolute bg-[#ede4fc] font-medium pt-0.5 pb-0.5 pl-2 pr-2 rounded-tr-[16px] rounded-tl-[16px] rounded-br-[16px] rounded-bl-none'>
             <p className='text-[0.9rem]'>Guides</p>
           </div>
         </div>
@@ -49,7 +49,7 @@ function MoreBanner() {
             className='absolute w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-[1.02]'
             alt='Trends'
           />
-          <div className='absolute bg-[#ede4fc] rounded-2xl font-medium pt-0.5 pb-0.5 pl-2 pr-2'>
+          <div className='absolute bg-[#ede4fc] font-medium pt-0.5 pb-0.5 pl-2 pr-2 rounded-tr-[16px] rounded-tl-[16px] rounded-br-[16px] rounded-bl-none'>
             <p className='text-[0.9rem]'>Trends</p>
           </div>
         </div>

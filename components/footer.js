@@ -6,12 +6,9 @@ function Footer() {
     <main className='relative mt-12 flex flex-col justify-between items-start  bg-[#ede4fc] rounded-2xl
     lg:flex-row
     md:flex-row'>
-      <section className='flex flex-col relative pt-17 pr-10 pb-5 pl-5
+      <section className='flex flex-col relative pt-10 pr-10 pb-5 pl-5
       lg:pl-15
       md:pl-15 '>
-        <div className='absolute top-0 left-0'>
-            <h1 className='text-[1.3rem]'>Commerce_</h1>
-        </div>
         <div className='relative w-fit'>
             <h1 className='text-[1.6rem] font-medium w-[100%]
             lg:w-[55%] md:-w[90%]'>

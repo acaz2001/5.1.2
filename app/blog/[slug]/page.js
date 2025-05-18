@@ -9,11 +9,11 @@ export async function generateStaticParams() {
   export default function Page({ params }) {
     const post = blogPosts.find(p => p.slug === params.slug);
 
-    if (!post) return <p>Blog post nije pronađen.</p>;
+    if (!post) return <p>Blog is not found!</p>;
 
     return (
     <main className='flex flex-col items-start w-[100%] '>
-    <section className='flex flex-col gap-5 pt-40 bg-[#f9f6fe] px-5
+    <section className='flex flex-col gap-5 pt-40 bg-[#ede4fc] px-5 rounded-t-3xl
     lg:px-65 md:px-20'>
         <div className='flex flex-col gap-5'>
             <h1 className='text-[2.4rem] font-medium leading-[1.15]
