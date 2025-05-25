@@ -25,7 +25,7 @@ function Page() {
         <div className='lg:w-[18%] md:w-[18%] w-[100%] mb-10'>
           <div>
             <h1 className='text-[1.3rem] font-medium'>Shop</h1>
-            <p className='text-[1rem] w-[70%] pt-1 lg:text-[1rem] text-[#6c6474] font-normal mt-1
+            <p className='text-[0.9rem] w-[70%] pt-1 lg:text-[0.9rem] text-[#6c6474] font-normal mt-1
             sm:w-[100%] sm:text-[0.9rem]'>
               Split your products into categories so visitors can easily navigate.
             </p>
@@ -47,7 +47,7 @@ function Page() {
                     className='transition-all duration-400 ease-in-out group-hover:fill-black'
                   />
                 </svg>
-                <h1 className={`font-medium ${activeCategory === cat ? 'text-black' : 'text-[#6c6474]'}`}>
+                <h1 className={`text-[0.9rem] font-medium ${activeCategory === cat ? 'text-black' : 'text-[#6c6474]'}`}>
                   {cat}
                 </h1>
               </div>

@@ -20,29 +20,19 @@ function Testimonials() {
   const currentTestimonial = testimonialsData[current];
 
   return (
-    <>
-      <svg width="0" height="0" className="absolute hidden">
-      <defs>
-        <clipPath id="clip-testimonial" clipPathUnits="objectBoundingBox">
-          <path d="M 0.001155 0.022195 C 0.002079 0.003898 0.007955 0.000901 0.010778 0.00169 L 0.598152 0.00169 H 0.89261 C 0.902463 0.00169 0.901848 0.013407 0.901848 0.028391 V 0.076532 C 0.901848 0.085274 0.905312 0.092348 0.909577 0.09231 C 0.937044 0.092062 0.98174 0.091811 0.988453 0.092384 C 0.995489 0.092985 0.99843 0.106509 0.999138 0.114154 C 0.999207 0.114887 0.99923 0.115597 0.99923 0.116344 V 0.976273 C 0.99923 0.977178 0.999199 0.977694 0.999099 0.978577 C 0.997614 0.992074 0.991694 0.996983 0.988838 0.997746 H 0.005774 C 0.001771 0.997746 0.00077 0.98986 0.00077 0.985916 C 0.000898 0.6723 0.001155 0.040491 0.001155 0.022195 Z" />
-        </clipPath>
-      </defs>
-    </svg>
+    <div className='relative'>
+    {/* Arrows */}
+    <section className='absolute top-0 right-2 flex flex-row gap-3 pt-3 pr-2 z-50'>
+      <div className=' cursor-pointer bg-[#ede4fc] rounded-full p-1'>
+        <FiChevronLeft size={30} onClick={handlePrev} />
+      </div>
+      <div className=' cursor-pointer bg-[#ede4fc] rounded-full p-1'>
+        <FiChevronRight size={30} onClick={handleNext} />
+      </div>
+    </section>
+    <main
+    className='testimonial relative bg-[#f9f6fe] w-full  flex flex-col items-center pt-20 pb-20 mt-12 gap-12 z-5 rounded-2xl overflow-hidden'>
 
-    <main style={{
-    clipPath: 'url(#clip-testimonial)',
-    WebkitClipPath: 'url(#clip-testimonial)'
-  }}
-    className='relative bg-[#f9f6fe] w-full flex flex-col items-center pt-20 pb-20 mt-12 gap-12 z-5 rounded-2xl overflow-hidden'>
-        {/* Arrows */}
-        <section className='absolute top-0 right-0 flex flex-row gap-5 pt-3 pr-2'>
-          <div className=' cursor-pointer'>
-            <FiChevronLeft size={32} onClick={handlePrev} />
-          </div>
-          <div className=' cursor-pointer'>
-            <FiChevronRight size={32} onClick={handleNext} />
-          </div>
-        </section>
       <section className='flex flex-col items-center gap-5 relative'>
         <img
           className='rounded-full w-20 h-20 object-cover
@@ -81,7 +71,7 @@ function Testimonials() {
         </div>
       </section>
     </main>
-    </>
+    </div>
   );
 }
 

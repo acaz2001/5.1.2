@@ -79,7 +79,7 @@ function ProductClient({ product }) {
 
           {/* Main Image */}
           <div ref={mainImageRef} className=' relative bg-[#f9f6fe] w-[100%] lg:w-[90%] md:w-[90%] p-20 rounded-3xl overflow-hidden'>
-            <div className='absolute top-0 right-0 flex flex-col items-center gap-1'>
+            <div className='absolute top-0 right-0 flex flex-col items-center gap-1 mt-3'>
               <PiCursorFill className='text-[0.8rem]' />
               <p className='text-[0.8rem] text-center w-[60%] leading-[1.1]'>Hover to zoom</p>
             </div>

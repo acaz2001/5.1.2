@@ -4,7 +4,7 @@ import Link from 'next/link'
 function HeroSmaller({page, heading, subheading}) {
   return (
     <>
-    <main className='bg-[#ede4fc] w-[100%] h-[350px]  rounded-2xl'>
+    <main className='custom-box bg-[#ede4fc] w-[100%] h-[350px]  rounded-2xl'>
     <div className="bg-[#ede4fc] rounded-3xl flex flex-col gap-[1rem] rounded-2x pl-20 pt-24 pr-30
     lg:pt-30 md:pt-30">              
         <div className='flex flex-col items-center'>

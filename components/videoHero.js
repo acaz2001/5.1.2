@@ -19,7 +19,8 @@ function VideoHero() {
   };
 
   return (
-    <main className="relative w-full h-[480px] overflow-hidden">
+    <div className="relative w-[100%]">
+    <main className="video relative w-full h-[480px] overflow-hidden">
       {/* VIDEO */}
       <video
         ref={videoRef}
@@ -41,14 +42,15 @@ function VideoHero() {
         </h1>
       </div>
 
-      {/* PLAY/PAUSE DUGME */}
+    </main>
+          {/* PLAY/PAUSE DUGME */}
       <button
         onClick={togglePlay}
-        className="absolute top-5 right-5 bg-[#ede4fc] bg-opacity-50 text-white p-3 rounded-full z-20 cursor-pointer hover:bg-opacity-70 transition"
+        className="absolute top-2 right-2 bg-[#ede4fc] bg-opacity-100 text-white p-3 rounded-full z-40 cursor-pointer hover:bg-opacity-70 transition"
       >
         {isPaused ? <FaPlay className="text-xl text-black" /> : <FaPause className="text-xl text-black" />}
       </button>
-    </main>
+    </div>
   );
 }
 

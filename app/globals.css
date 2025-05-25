@@ -140,9 +140,73 @@
 
 }
 
+.custom-box {
+  mask-image: url('/svgHero2.png');
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+
+.product {
+  mask-image: url('/svgProduct.png');
+  mask-size: auto 100%;
+  mask-repeat: no-repeat;
+  mask-position: right bottom;
+  
+}
+
+@media (min-width: 700px) and (max-width: 768px) {
+
+}
+
+.testimonial {
+  mask-image: url('/testimonialsSvg.png');
+  mask-size: cover; 
+  mask-repeat: no-repeat;
+  mask-position: right top;
+
+}
+
+
+.collection {
+  mask-image: url('/collectionsSVG.png');
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: left bottom;
+}
+
+.video {
+  mask-image: url('/videoSvg.png');
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: right top;  
+}
+
+.highlights {
+  mask-image: url('/highlightsSvg.png');
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: right top;  
+}
+
+.blog {
+  mask-image: url('/blogSvg.png');
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: left top;  
+}
 
 
 
+@media (width<740px) {
+  .custom-box {
+     mask-image: url('/svgHero3.png');
+  }
+
+}
+
+@media (width <= 800px) {
+
+}
 
 
 @layer base {

@@ -20,7 +20,7 @@ function Header() {
   return (
     <>
       {/* Header meni */}
-      <main className='absolute flex flex-row items-center w-fit lg:gap-1 md:gap-1 sm:gap-0 gap-0 px-4 py-[10px] bg-transparent rounded-xl z-50'>
+      <main className='absolute flex flex-row items-center w-fit lg:gap-4 md:gap-4 sm:gap-0 gap-0 px-4 py-[10px] bg-transparent rounded-xl z-50'>
         <section className='mr-3'>
           <Link href="/">
             <h2 className='text-[1.2rem] font-medium cursor-pointer'>
@@ -31,19 +31,19 @@ function Header() {
         <section>
           <ul className='flex flex-row items-center gap-0 text-[0.9rem]'>
             <Link href="/shop">
-              <li className='cursor-pointer text-[0.8rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+              <li className='cursor-pointer text-[0.85rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
                 Shop</li>
             </Link>
             <Link href="/collections">
-              <li className='cursor-pointer  text-[0.8rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+              <li className='cursor-pointer  text-[0.85rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
                 Collections</li>
             </Link>
             <Link href="/blog">
-              <li className='cursor-pointer  text-[0.8rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+              <li className='cursor-pointer  text-[0.85rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
                 Blog</li>
             </Link>
             <Link href="/support">
-              <li className='cursor-pointer hidden lg:block md:block sm:hidden text-[0.8rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
+              <li className='cursor-pointer hidden lg:block md:block sm:hidden text-[0.85rem] hover:bg-[#d9d1f7] hover:rounded-[10px] pt-2 pb-2 pl-3 pr-3 font-[450]'>
                 Support</li>
             </Link>
           </ul>

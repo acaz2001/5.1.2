@@ -14,7 +14,7 @@ function Hero({ heading, subheading, badgeText }) {
       */}
 
       <div 
-      className="bg-[#ede4fc] rounded-3xl flex flex-col items-center gap-[1rem]  pt-26 pb-30 h-[500px] 
+      className="custom-box bg-[#ede4fc] rounded-3xl flex flex-col items-center gap-[1rem]  pt-26 pb-30 h-[500px] 
       lg:h-[500px] lg:pt-30 md:pt-27 
       sm:h-[450px] ">
         {/* Badge */}
