@@ -25,7 +25,7 @@ function OurCollections() {
 
         </Link>
       </section>
-        <div className='absolute bottom-1 right-2 z-50'>
+        <div className='collection-arrow absolute bottom-[3%] right-[2%] z-50'>
         <LuArrowUpRight className= 
           'bg-[#ede4fc] p-3 text-[2.9rem] rounded-4xl transition-transform duration-400 ease-in-out group-hover:rotate-45'/>
         </div>

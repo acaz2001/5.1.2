@@ -20,8 +20,8 @@ function Product({ post }) {
 
       </div>
       </Link>
-      <div className='absolute bottom-[1.5%] left-[86.5%] z-50 '>
-        <LuArrowUpRight className= 
+      <div className='arrow bg-[#ede4fc] rounded-4xl  absolute bottom-[3%] left-[87.2%] z-50 '>
+        <LuArrowUpRight className=
         'p-3 text-[2.9rem] rounded-4xl transition-transform duration-400 ease-in-out group-hover:rotate-45'/>
       </div>
       </div>
