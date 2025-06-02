@@ -37,12 +37,15 @@ function Page({ params }) {
           icon: <PiCursorFill className='text-[1.2rem]' />,
           title: "International Shipping",
           description: "Shop from anywhere with convenient worldwide shipping."
-        },
-        {
+        }
+        /*
+                  {
             icon: <PiCursorFill className='text-[1.2rem]' />,
             title: "0% Finance Available",
             description: "Spread the cost of your purchase with 0% interest finance plans."
         }
+        */
+
       ]
 
 

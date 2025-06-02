@@ -10,7 +10,7 @@ function AddToCart({ show, setShow }) {
 
   return (
     <main className={`
-      fixed top-0 right-0 h-[100vh] w-[500px] bg-[white]
+      fixed top-0 right-0 h-[100vh] lg:w-[500px] md:w-[500px] sm:w-[500px] w-[100%] bg-[white]
       flex flex-col justify-between z-50
       transition-transform duration-500 ease-in-out
       ${show ? 'translate-x-0' : 'translate-x-full'}
@@ -47,7 +47,8 @@ function AddToCart({ show, setShow }) {
               </div>
 
               <div className='flex flex-col flex-1 gap-6'>
-                <div className='flex flex-row justify-between'>
+                <div className='flex lg:flex-row md:flex-row sm:flex-row flex-col
+                lg:justify-between md:justify-between sm:justify-between justify-between'>
                   <div className='flex flex-col gap-1'>
                     <h1 className='font-[450]'>{item.name}</h1>
                     <p className='text-sm text-gray-500'>{item.variant}</p> {/* Prikazuje varijantu */}

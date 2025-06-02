@@ -4,6 +4,7 @@ import Hero from '../../components/hero'
 import Product from '../../components/product'
 import ProductList from '../../components/productList'
 import { LuCircle } from "react-icons/lu";
+import { FaGripLines } from "react-icons/fa6";
 import { useState } from 'react';
 
 function Page() {
@@ -19,10 +20,10 @@ function Page() {
       />
 
       <section className='lg:flex lg:flex-row lg:justify-between mt-10 mb-20
-      md:flex md:flex-row md:justify-between
+      md:flex md:flex-col md:justify-between
       sm:flex sm:flex-col'>
         {/* Sidebar */}
-        <div className='lg:w-[18%] md:w-[18%] w-[100%] mb-10'>
+        <div className='lg:w-[18%] md:w-[100%] w-[100%] mb-10'>
           <div>
             <h1 className='text-[1.3rem] font-medium'>Shop</h1>
             <p className='text-[0.9rem] w-[70%] pt-1 lg:text-[0.9rem] text-[#6c6474] font-normal mt-1
@@ -56,7 +57,7 @@ function Page() {
         </div>
 
         {/* Products */}
-        <div className='w-[100%] lg:w-[78%] flex'>
+        <div className='w-[100%] lg:w-[79%] flex'>
           <ProductList activeCategory={activeCategory} />
         </div>
       </section>

@@ -11,7 +11,7 @@ function AboutProd({ icon, title, description }) {
         <p className='mt-2 text-[#6c6474] text-[0.95rem] w-[90%]'>{description}</p>
       </div>
     </section>
-      <div className='absolute top-[-5px] left-0 bg-[#ede4fc] p-3 my-4 mx-4 rounded-full z-50'>
+      <div className='highlights-icon absolute top-[-5px] left-0 bg-[#ede4fc] p-3 my-4 mx-4 rounded-full z-50'>
         {icon}
       </div>
     </div>

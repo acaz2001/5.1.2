@@ -5,7 +5,7 @@ function BlogGridCard({ post }) {
   if (!post) return null;
 
   return (
-    <div className='relative'>
+    <div className='group relative'>
       <div className='absolute left-[-5px] bg-[#ede4fc] rounded-2xl font-medium pt-0.5 pb-0.5 pl-3 pr-3 m-2'>
         <p className='text-[0.9rem]'>{post.categorie}</p>
     </div>

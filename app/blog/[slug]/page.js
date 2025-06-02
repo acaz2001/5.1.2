@@ -12,8 +12,8 @@ export async function generateStaticParams() {
     if (!post) return <p>Blog is not found!</p>;
 
     return (
-    <main className='flex flex-col items-start w-[100%] '>
-    <section className='flex flex-col gap-5 pt-40 bg-[#ede4fc] px-5 rounded-t-3xl
+    <main className=' flex flex-col items-start w-[100%] '>
+    <section className='custom-blog flex flex-col gap-5 pt-40 bg-[#ede4fc] px-5 rounded-t-3xl
     lg:px-65 md:px-20'>
         <div className='flex flex-col gap-5'>
             <h1 className='text-[2.4rem] font-medium leading-[1.15]

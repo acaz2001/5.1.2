@@ -4,15 +4,16 @@ import Link from 'next/link';
 
 function BlogBanner() {
   return (
-    <main className='flex flex-col w-[100%] h-[38rem] 
-    lg:flex lg:flex-row lg:w-[100%] lg:h-[31rem]
+    <main className='flex flex-col w-[100%] h-[58rem] 
+    lg:flex lg:flex-row lg:w-[100%] lg:h-[32rem]
     md:flex-col md:w-[100%] md:h-[53rem]
-    sm:flex-col sm:w-[100%] sm:h-[42rem]'>
+    sm:flex-col sm:w-[100%] sm:h-[48rem]'>
 
         <section className='bg-[url(/pawel.jpg)] w-[100%] h-[46%] 
         lg:rounded-l-2xl lg:rounded-tr-none  lg:w-[48%] lg:h-[100%]
         md:w-[100%] md:rounded-l-2xl md:h-[63%]
-        sm:w-[100%] sm:rounded-t-2xl sm:h-[58%]'>
+        sm:w-[100%] sm:rounded-t-2xl sm:h-[58%]
+        rounded-t-[15px]'>
                 
         </section>
         <section className='flex flex-col justify-between w-[100%] h-[54%] p-8 bg-[#f9f6fe] rounded-b-2xl 
@@ -24,7 +25,8 @@ function BlogBanner() {
                 lg:text-[2.5rem] 
                 font-medium leading-[1.2] lg:w-[85%]
                 md:text-[2rem]
-                sm:text-[2rem] sm:w-[100%]'>
+                sm:text-[2rem] sm:w-[100%]
+                '>
                     10 Creative Ways to Use Digital Backgrounds in Your Projects
                 </h1>
                 <p className='text-[1rem] text-[#6c6474] font-medium mt-5 w-[100%]
@@ -34,8 +36,8 @@ function BlogBanner() {
                     Discover unique and inspiring ways to incorporate digital backgrounds into your designs, from websites to social media.
                 </p>
             </div>
-            <div className='relative'>
-                <div className='flex flex-row items-center gap-2'>
+            <div className=' relative'>
+                <div className=' flex flex-row items-center gap-2'>
                     <div className='rounded-full'>
                         <img className='w-[2.2rem] h-[2.2rem] rounded-full' src={"/avatar2.jpg"}></img>
                     </div>
@@ -45,7 +47,7 @@ function BlogBanner() {
                     </div>
                 </div>
                 <Link href={`/blog/how-to-make-your-social-media`}>
-                <div className='absolute bottom-0 right-0 bg-[#ede4fc] p-3 rounded-3xl transition-transform duration-400 ease-in-out cursor-pointer hover:rotate-45'>
+                <div className='blogBanner-icon absolute bottom-0 right-0 bg-[#ede4fc] p-3 rounded-3xl transition-transform duration-400 ease-in-out cursor-pointer hover:rotate-45'>
                     <LuArrowUpRight className='text-[1.4rem] '/>
                 </div>
                 </Link>

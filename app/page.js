@@ -27,7 +27,7 @@ export default function Home() {
   const features = [
     {
       icon: <AiFillThunderbolt className='text-[1.2rem]' />,
-      title: "Instant Digital Downloads",
+      title: "Instant Downloads",
       description: "Access your digital products purchase immediately after checkout."
     },
     {
@@ -44,7 +44,7 @@ export default function Home() {
 
   
   return (
-    <main>
+    <main className="home">
         <section className="custom-box rounded-2xl">
           <div
               className="relative pt-38 pl-8 bg-cover w-full h-[600px] rounded-2xl
@@ -165,15 +165,16 @@ export default function Home() {
 
 
 
-        <section className="flex flex-row items-center justify-between mt-20  mb-8">
+        <section className="flex lg:flex-row md:flex-row sm:flex-row flex-col lg:items-center md:items-center sm:items-center items-start justify-between mt-20  mb-8">
           <div className="lg:w-fit md:w-fit sm:w-fit w-[60%]">
             <h1 className="text-[1.5rem] font-medium">Explore the blog</h1>
-            <p className="text-[#6c6474] mt-1.5 font-normal">
+            <p className="text-[#6c6474] mt-1.5 font-normal ">
             Share insights, boost SEO, and build trust with your audience.
             </p>
           </div>
           <Link href='/blog'>
-          <div className="flex flex-row items-center gap-[0.5rem] mr-3 cursor-pointer pt-1.5 pb-1.5 pl-5 pr-3 rounded-full transition duration-300 ease-in-out hover:bg-[#ede4fc]">
+          <div className="flex flex-row items-center gap-[0.5rem] mr-3 cursor-pointer 
+          pt-1.5 pb-1.5 lg:pl-5 md:pl-5 sm:pl-5 pl-2 pr-3 mt-4 rounded-full transition duration-300 ease-in-out hover:bg-[#ede4fc]">
             <p className="font-medium">View Posts</p>
             <GoArrowRight className="text-[1.1rem] font-bold"/>
           </div>

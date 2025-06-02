@@ -7,7 +7,7 @@ function CartIcon({ showCart, setShowCart }) {
   return (
     <div className="relative mt-1.5">
       <button onClick={() => setShowCart(!showCart)}>
-        <PiBasketFill className="text-[1.1rem] cursor-pointer" />
+        <PiBasketFill className="text-[1.25rem] cursor-pointer" />
       </button>
 
       {cartItems.length > 0 && (

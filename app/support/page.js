@@ -20,7 +20,7 @@ function page() {
             <Faq></Faq>
         </div>
         <div className='flex flex-col items-center'>
-            <h1 className='text-[2.5rem] font-medium'>
+            <h1 className='text-[2.5rem] font-medium text-center'>
             Still got questions?
             </h1>
             <p className='text-[#6c6474] text-[1.1rem] mt-2 mb-10 text-center w-[80%]'>

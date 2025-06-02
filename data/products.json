@@ -49,7 +49,8 @@
           "name": "Tactile",
           "price": 59.99,
           "priceOld" : 89.99,
-          "image": "prodTechno3"
+          "image": "prodTechno3",
+          "variants": ""
         },
         {
           "name": "Cilcky",

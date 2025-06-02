@@ -20,7 +20,7 @@ function Testimonials() {
   const currentTestimonial = testimonialsData[current];
 
   return (
-    <div className='relative'>
+    <div className='relative transition transition-all 0.5s'>
     {/* Arrows */}
     <section className='absolute top-0 right-2 flex flex-row gap-3 pt-3 pr-2 z-50'>
       <div className=' cursor-pointer bg-[#ede4fc] rounded-full p-1'>
@@ -63,7 +63,7 @@ function Testimonials() {
 
       {/* Logos below */}
       <section className='flex flex-col items-center justify-center mt-5'>
-        <p className='text-[#6c6474] text-[0.9rem] lg:text-[1rem] md:text-[1rem] sm:text-[1rem]'>
+        <p className='text-[#6c6474] hidden lg:block md:block sm:block  text-[0.8rem] lg:text-[1rem] md:text-[1rem] sm:text-[1rem]'>
           Feature client logos to build trust and credibility for your brand:
         </p>
         <div className='w-[32%] mt-4'>
