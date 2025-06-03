@@ -71,11 +71,11 @@ export default function Home() {
               className=" z-100 text-[2.6rem] tracking-tight font-[450] mt-7 w-[90%]
               lg:text-[3.8rem] lg:w-[68%]
               md:w-[65%]">
-                The <span className="text-[#8345d8] z-10">beautiful</span> way to sell anything with Framer.
+                The <span className="text-[#8345d8] z-10">beautiful</span> way to sell anything with Us.
               </h1>
               <p className="text-[1.1rem] text-[#6c6474] mt-3 w-[80%] z-100
               lg:w-[40%] md:w-[55%]" >
-                Designed with Framer, this template makes it easy to turn your website into a powerful ecommerce store.
+                Designed by us, this template makes it easy to turn your website into a powerful ecommerce store.
               </p>
             </div>
             <div className="cursor-pointer w-[187px]">

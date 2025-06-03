@@ -46,17 +46,10 @@
       "variantTitle" : "Keyboard switch type",
       "variants": [
         {
-          "name": "Tactile",
-          "price": 59.99,
-          "priceOld" : 89.99,
-          "image": "prodTechno3",
-          "variants": ""
-        },
-        {
           "name": "Cilcky",
           "price": 64.99,
           "priceOld" : 99.99,
-          "image": "prodTechno3"
+          "image": "prodTechno2"
         },
         {
           "name": "Linear",
@@ -84,12 +77,6 @@
       "variantTitle" : "Connectivity technology",
       "variants": [
         {
-          "name": "Wireless",
-          "price": 59.99,
-          "priceOld" : 89.99,
-          "image": "prodTechno3"
-        },
-        {
           "name": "Wired",
           "price": 64.99,
           "priceOld" : 99.99,
@@ -113,31 +100,31 @@
       "name": "Horizon Glow Sneakers",
       "price": 64.99,
       "desc" : "Nike's range of products include shoes, jerseys, shorts, cleats, baselayers, etc. for sports activities such as soccer,[70] basketball, track and field, combat sports, tennis, American football, athletics, golf, ice hockey, and cross training for men, women, and children.",
-      "variantTitle" : "Shoe Size",
+      "variantTitle" : "Shoe Color",
       "variants": [
         {
-          "name": "6",
+          "name": "Blue",
           "price": 64.99,
           "priceOld" : 89.99,
           "image": "prodShoe1"
         },
         {
-          "name": "7",
+          "name": "Pink",
           "price": 64.99,
           "priceOld" : 99.99,
-          "image": "prodShoe1"
+          "image": "prodShoe1Pink"
         },
         {
-          "name": "8",
+          "name": "Green",
           "price": 64.99,
           "priceOld" : 99.99,
-          "image": "prodShoe1"
+          "image": "prodShoe1Green"
         },
         {
-          "name": "9",
+          "name": "Red",
           "price": 64.99,
           "priceOld" : 99.99,
-          "image": "prodShoe1"
+          "image": "prodShoe1Red"
         }
       ],
       "category": "Footwear",
@@ -149,36 +136,38 @@
       "infoDesc2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet urna ante. Aenean eu tempor arcu, quis dapibus augue. Duis aliquet tristique hendrerit. Sed porttitor porta eros vitae rutrum. Cras dignissim mi nec enim tempus tincidunt. ",
       "infoImg2": "clark-van-der-beken-Tk0B3Dfkf_4-unsplash"
     },
+
+
     {
       "slug": "Vibrant-Work-Boots",
       "name": "Vibrant Work Boots",
       "price": 64.99,
       "desc" : "Nike's range of products include shoes, jerseys, shorts, cleats, baselayers, etc. for sports activities such as soccer,[70] basketball, track and field, combat sports, tennis, American football, athletics, golf, ice hockey, and cross training for men, women, and children.",
-      "variantTitle" : "Shoe Size",
+      "variantTitle" : "Shoe Color",
       "variants": [
         {
-          "name": "6",
+          "name": "Blue",
           "price": 64.99,
           "priceOld" : 89.99,
           "image": "prodShoe2"
         },
         {
-          "name": "7",
+          "name": "Brown",
           "price": 64.99,
           "priceOld" : 99.99,
-          "image": "prodShoe2"
+          "image": "prodShoe2Brown"
         },
         {
-          "name": "8",
+          "name": "Green",
           "price": 64.99,
           "priceOld" : 99.99,
-          "image": "prodShoe2"
+          "image": "prodShoe2Green"
         },
         {
-          "name": "9",
+          "name": "Pink",
           "price": 64.99,
           "priceOld" : 99.99,
-          "image": "prodShoe2"
+          "image": "prodShoe2Pink"
         }
       ],
       "category": "Footwear",
@@ -196,31 +185,31 @@
       "name": "Classic Off-White Trainers",
       "price": 64.99,
       "desc" : "Nike's range of products include shoes, jerseys, shorts, cleats, baselayers, etc. for sports activities such as soccer,[70] basketball, track and field, combat sports, tennis, American football, athletics, golf, ice hockey, and cross training for men, women, and children.",
-      "variantTitle" : "Shoe Size",
+      "variantTitle" : "Shoe Color",
       "variants": [
         {
-          "name": "6",
+          "name": "Blue",
           "price": 64.99,
           "priceOld" : 89.99,
           "image": "prodShoe3"
         },
         {
-          "name": "7",
+          "name": "Green",
           "price": 64.99,
           "priceOld" : 99.99,
-          "image": "prodShoe3"
+          "image": "prodShoe3Green"
         },
         {
-          "name": "8",
+          "name": "Pink",
           "price": 64.99,
           "priceOld" : 99.99,
-          "image": "prodShoe3"
+          "image": "prodShoe3Pink"
         },
         {
-          "name": "9",
+          "name": "LightGreen",
           "price": 64.99,
           "priceOld" : 99.99,
-          "image": "prodShoe3"
+          "image": "prodShoe3LightGreen"
         }
       ],
       "category": "Footwear",
