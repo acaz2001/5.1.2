@@ -1,6 +1,7 @@
 import React from 'react';
 import Product from './product';
 import productPosts from '../data/products.json';
+import { products } from '../sanity/lib/queries';
 
 function ProductList({ activeCategory = 'All', isPopular = 'false' }) {
   // 1. Filter po kategoriji ako nije "All"
