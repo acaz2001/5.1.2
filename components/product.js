@@ -2,18 +2,35 @@
 import React from 'react'
 import { LuArrowUpRight } from "react-icons/lu";
 import Link from 'next/link'
+import { client } from '../sanity/lib/client';
+import imageUrlBuilder from '@sanity/image-url'
 
-function Product({ post }) {
-  if (!post) return null;
+
+
+
+const builder = imageUrlBuilder(client)
+function urlFor(source) {
+  return builder.image(source)
+}
+
+
+function Product({ data }) {
+  if (!data) return null;
+
+console.log("Slika Product Images:", data.image)
 
   return (
     <>
     <main className='relative group w-[100%] lg:w-[100%] z-40'>
 
       <div className='relative'>
-      <Link href={`/shop/${post.slug}`}> 
+      <Link href={`/shop/${data.slug.current}`}> 
       <div className=' product bg-[#f9f6fe] flex items-center justify-center relative w-[100%] h-[82%] rounded-2xl cursor-pointer z-40'>
-        <img src={`/${post["image"]}.png`} 
+        <img   src={
+          data.images?.asset
+            ? urlFor(data.images.asset).url()
+            : '/fallback.png'
+        }
         className='w-[90%] p-5 my-3 transition-all duration-400 ease-in-out group-hover:scale-[1.05]
         object-cover object-center'>
         </img>
@@ -27,10 +44,10 @@ function Product({ post }) {
       </div>
       <div className='mt-2 z-50'>
         <h1 className='text-[1.3rem] font-medium'>
-        {post.name}
+        {data.name}
         </h1>
         <p className='text-[0.9rem] text-[#6c6474] font-medium mt-1'>
-        USD <span>{post.price}$</span>    
+        USD <span>{data.price}$</span>    
         </p>
       </div>
 

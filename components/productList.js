@@ -1,27 +1,46 @@
+'use client'
 import React from 'react';
 import Product from './product';
 import productPosts from '../data/products.json';
 import { products } from '../sanity/lib/queries';
+import getAllProducts from '../sanity/lib/getAllProducts';
+import { useState, useEffect } from 'react';
 
 function ProductList({ activeCategory = 'All', isPopular = 'false' }) {
-  // 1. Filter po kategoriji ako nije "All"
-  const filteredByCategory = activeCategory === 'All'
-    ? productPosts
-    : productPosts.filter(post => post.category === activeCategory);
+  const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
 
-  // 2. Filter po popularnosti ako isPopular === "true"
-  const postsToDisplay = isPopular === 'true'
-    ? filteredByCategory.filter(post => post.popular === 'true') // popular je string u JSON-u
-    : filteredByCategory;
+  useEffect(() => {
+    async function fetchProducts() {
+      const data = await getAllProducts()
+      console.log("📦 Products fetched from Sanity:", data)
+      setProducts(data)
+      console.log("📦 Sanity proizvodi:", data);
+
+      setLoading(false)
+    }
+
+    fetchProducts()
+  }, [])
+
+  const filteredByCategory = activeCategory === 'All'
+    ? products
+    : products.filter(p => p.category?.name === activeCategory)
+
+  const finalProducts = isPopular === 'true'
+    ? filteredByCategory.filter(p => p.popular === true)
+    : filteredByCategory
+
+
 
   return (
     <main className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 
-    gap-5 auto-rows-auto w-[100%] p-0 m-0'>
-      {postsToDisplay.map((post) => (
-        <Product key={post.slug} post={post} />
+    gap-5 auto-rows-auto w-full'>
+      {finalProducts.map((data) => (
+        <Product key={data._id} data={data} />
       ))}
     </main>
-  );
+  )
 }
 
-export default ProductList;
+export default ProductList

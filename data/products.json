@@ -1,6 +1,6 @@
 [
     {
-      "slug": "Retro-Handheld-Console",
+      "slug": "retrohandheldconsole",
       "name": "Retro Handheld Console",
       "price": 59.99,
       "desc" : "Introduced in late 1997, the DualShock Analog Controller (SCPH-1200) can provsluge vibration feedback based on game activity, as well as input through two analog sticks.",
@@ -39,7 +39,7 @@
 
 
     {
-      "slug": "Keyboard",
+      "slug": "keyboard",
       "name": "Keyboard",
       "price": 59.99,
       "desc" : "Introduced in late 1997, the DualShock Analog Controller (SCPH-1200) can provsluge vibration feedback based on game activity, as well as input through two analog sticks.",
@@ -70,7 +70,7 @@
 
 
     {
-      "slug":"BeatsElectronics",
+      "slug":"beatselectronics",
       "name": "BeatsElectronics",
       "price": 59.99,
       "desc" : "Introduced in late 1997, the DualShock Analog Controller (SCPH-1200) can provsluge vibration feedback based on game activity, as well as input through two analog sticks.",
@@ -96,7 +96,7 @@
 
 
     {
-      "slug": "Horizon-Glow-Sneakers",
+      "slug": "horizonglowsneakers",
       "name": "Horizon Glow Sneakers",
       "price": 64.99,
       "desc" : "Nike's range of products include shoes, jerseys, shorts, cleats, baselayers, etc. for sports activities such as soccer,[70] basketball, track and field, combat sports, tennis, American football, athletics, golf, ice hockey, and cross training for men, women, and children.",
@@ -139,7 +139,7 @@
 
 
     {
-      "slug": "Vibrant-Work-Boots",
+      "slug": "vibrantworkboots",
       "name": "Vibrant Work Boots",
       "price": 64.99,
       "desc" : "Nike's range of products include shoes, jerseys, shorts, cleats, baselayers, etc. for sports activities such as soccer,[70] basketball, track and field, combat sports, tennis, American football, athletics, golf, ice hockey, and cross training for men, women, and children.",
@@ -181,7 +181,7 @@
       "popular": "true"
     },
     {
-      "slug": "Classic-Off-White-Trainers",
+      "slug": "classicoffwhitetrainers",
       "name": "Classic Off-White Trainers",
       "price": 64.99,
       "desc" : "Nike's range of products include shoes, jerseys, shorts, cleats, baselayers, etc. for sports activities such as soccer,[70] basketball, track and field, combat sports, tennis, American football, athletics, golf, ice hockey, and cross training for men, women, and children.",
@@ -225,7 +225,7 @@
 
 
     {
-      "slug": "Tropical-Paradise-Plant",
+      "slug": "tropicalparadiseplant",
       "name": "Tropical Paradise Plant",
       "price": 64.99,
       "desc" : "We make thoughtfully designed products that are as useful as they are beautiful. Vintage and modern, these products are often inspired by old things we love but are wholly original.",
@@ -262,7 +262,7 @@
 
 
     {
-      "slug": "VPotted-Succulent-Plant",
+      "slug": "pottedsucculentplant",
       "name": "Potted Succulent Plant",
       "price": 64.99,
       "desc" : "We make thoughtfully designed products that are as useful as they are beautiful. Vintage and modern, these products are often inspired by old things we love but are wholly original.",
@@ -298,7 +298,7 @@
       "popular": "true"
     },
     {
-      "slug": "Classic-Off-White",
+      "slug": "classicoffwhite",
       "name": "Classic Off-White",
       "price": 64.99,
       "desc" : "We make thoughtfully designed products that are as useful as they are beautiful. Vintage and modern, these products are often inspired by old things we love but are wholly original.",

@@ -24,7 +24,7 @@ export const Products = defineType({
     }),
 
     defineField({
-      name: 'description',
+      name: 'desc',
       title: 'Short Description',
       type: 'text',
       rows: 3,
@@ -36,13 +36,61 @@ export const Products = defineType({
       type: 'array',
       of: [{ type: 'block' }],
     }),
+    defineField({
+      name: 'variantTitle',
+      title: 'Variant Title',
+      type: 'string'
+    }),
+     defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'reference',
+      to: [{ type: 'category' }],
+      
+    }),
 
+    defineField({
+      name: 'infoTitle1',
+      title: 'Info Title 1',
+      type: 'string'
+    }),
+        defineField({
+      name: 'infoDesc1',
+      title: 'Info Description 1',
+      type: 'text'
+    }),    
+    defineField({
+      name: 'infoImg1',
+      title: 'Info Image 1',
+      type: 'image',
+      options: { hotspot: true }
+    }),
+    defineField({
+      name: 'infoTitle2',
+      title: 'Info Title 2',
+      type: 'string'
+    }),
+    defineField({
+      name: 'infoDesc2',
+      title: 'Info Description 2',
+      type: 'text'
+    }),
+    defineField({
+      name: 'infoImg2',
+      title: 'Info Image 2',
+      type: 'image',
+      options: { hotspot: true }
+    }),
+    defineField({
+      name: 'popular',
+      title: 'Popular',
+      type: 'boolean'
+    }),
     defineField({
       name: 'images',
       title: 'Images',
-      type: 'array',
-      of: [{ type: 'image', options: { hotspot: true } }],
-      validation: (Rule) => Rule.min(1),
+      type: 'image',
+      options: { hotspot: true }
     }),
 
     defineField({
@@ -80,20 +128,13 @@ export const Products = defineType({
         {
           type: 'object',
           fields: [
-            { name: 'name', type: 'string', title: 'Variant Name' },
-            { name: 'color', type: 'string', title: 'Color' },
-            { name: 'size', type: 'string', title: 'Size' },
-            { name: 'price', type: 'number', title: 'Price Override' },
-            { name: 'stock', type: 'number', title: 'Stock' },
-            {
-              name: 'image',
-              type: 'image',
-              title: 'Variant Image',
-              options: { hotspot: true },
-            },
-          ],
-        },
-      ],
+            { name: 'name', type: 'string', title: 'Name' },
+            { name: 'price', type: 'number', title: 'Price' },
+            { name: 'priceOld', type: 'number', title: 'Old Price' },
+            { name: 'image', type: 'image', title: 'Image', options: { hotspot: true } }
+          ]
+        }
+      ]
     }),
 
     defineField({

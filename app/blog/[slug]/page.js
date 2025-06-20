@@ -1,13 +1,24 @@
+
 import blogPosts from '../../../data/blogData.json';
-
-
+import { getBlogBySlug } from '../../../sanity/lib/getBlogBySlug';
+import { urlFor } from '../../../sanity/lib/image';
+import { client } from '../../../sanity/lib/client';
 
 export async function generateStaticParams() {
-    return blogPosts.map(post => ({ slug: post.slug }));
-  }
+  const query = `*[_type == "blog" && defined(slug.current)]{ "slug": slug.current }`;
+  const blogs = await client.fetch(query);
+ 
 
-  export default function Page({ params }) {
-    const post = blogPosts.find(p => p.slug === params.slug);
+
+  return blogs
+    .filter(post => typeof post.slug === 'string') // 🔒 validacija
+    .map(post => ({ slug: post.slug }));
+}
+
+
+
+  export default async function Page({ params }) {
+    const post = await getBlogBySlug(params.slug);
 
     if (!post) return <p>Blog is not found!</p>;
 
@@ -27,14 +38,17 @@ export async function generateStaticParams() {
         <div className='flex flex-col gap-5'>
         <div className='flex flex-row items-center gap-2'>
             <div className='rounded-full'>
-                <img className='w-[2.2rem] h-[2.2rem] rounded-full' src={`/${post["avatarimg"]}.jpg`}></img>
+                <img src={post.avatarimg ? urlFor(post.avatarimg).width(100).url() : '/fallback-avatar.jpg'} 
+                className='w-[2.2rem] h-[2.2rem] rounded-full' 
+                ></img>
             </div>
             <div>
                 <p className='font-medium'>Written by <span>{post.avatarname}</span></p>
                 <p className='text-[0.8rem] text-[#6c6474] font-normal'>{post.avatarjob}</p>
             </div>
         </div>
-        <img src={`/${post["image"]}.avif`} className='rounded-t-2xl'></img>
+        <img src={post.image ? urlFor(post.image).url() : '/fallback.jpg'}  
+        className='rounded-t-2xl'></img>
         </div>
     </section> 
 
